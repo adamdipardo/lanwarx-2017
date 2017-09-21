@@ -1,0 +1,683 @@
+/*
+Theme Name: LANWAR 17
+Theme URI: http://lanwarx.ca
+Author: Adam Di Pardo
+Author URI: http://adamdipardo.com/
+Version: 0.1
+Text Domain: lanwar17
+*/
+
+$lanwarRed: #b9121b;
+$mediumMin: 768px;
+$largeMin: 992px;
+$smallMin: 576px;
+$xLargeMin: 1200px;
+
+/**
+ * START GLOBAL CSS
+ */
+html, body {
+	height: 100%;
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+	border-radius: 0;
+	transition: background-color 0s, border-color 0s;
+}
+
+.btn-lanwar {
+	background-color: #870e14;
+	color: white;
+
+	&:hover {
+		background-color: $lanwarRed;
+		color: white;
+	}
+}
+
+.btn-black {
+	color: white;
+	background-color: black;
+
+	&:hover {
+		color: white;
+		background-color: lighten(black, 10%);
+	}
+}
+
+input.form-control, textarea.form-control {
+	border-radius: 0;
+}
+
+h2 {
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 1.25rem;
+	line-height: 1.75em;
+	margin: 0 0 40px;
+	text-align: center;
+
+	i {
+		color: $lanwarRed;
+		display: inline-block;
+		margin: 0 10px;
+		position: relative;
+		top: -4px;
+	}
+
+	@media all and (max-width: $smallMin - 1) {
+		font-size: 1rem;
+	}
+
+	@media all and (max-width: $xLargeMin - 1) {
+		font-size: 1.1rem;
+	}
+}
+/**
+ * END GLOBAL CSS
+ */
+
+/**
+ * START INTRO CSS
+ */
+section.intro {
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	color: white;
+
+	div.slider {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+	    left: 0;
+	    overflow-x: hidden;
+
+	    div.image:nth-child(1), div.image:nth-child(4) {
+	    	background-image: url(/wp-content/themes/lanwar-17/images/banner-red.jpg);
+	    }
+
+	    div.image:nth-child(2) {
+	    	background-image: url(/wp-content/themes/lanwar-17/images/banner-black.jpg);
+	    }
+
+	    div.image:nth-child(3) {
+	    	background-image: url(/wp-content/themes/lanwar-17/images/banner-grey.jpg);
+	    }
+
+	    @media all and (max-width: $xLargeMin - 1) {
+	    	div.image:nth-child(1), div.image:nth-child(4) {
+		    	background-image: url(/wp-content/themes/lanwar-17/images/banner-red-lg.jpg);
+		    }
+
+		    div.image:nth-child(2) {
+		    	background-image: url(/wp-content/themes/lanwar-17/images/banner-black-lg.jpg);
+		    }
+
+		    div.image:nth-child(3) {
+		    	background-image: url(/wp-content/themes/lanwar-17/images/banner-grey-lg.jpg);
+		    }
+	    }
+
+	    @media all and (max-width: $smallMin - 1) {
+	    	div.image:nth-child(1), div.image:nth-child(4) {
+		    	background-image: url(/wp-content/themes/lanwar-17/images/banner-red-md.jpg);
+		    }
+
+		    div.image:nth-child(2) {
+		    	background-image: url(/wp-content/themes/lanwar-17/images/banner-black-md.jpg);
+		    }
+
+		    div.image:nth-child(3) {
+		    	background-image: url(/wp-content/themes/lanwar-17/images/banner-grey-md.jpg);
+		    }
+	    }
+
+	    &[data-animation="on"] div.image:nth-child(1) {
+	    	animation-name: slideImageOut;
+			animation-duration: 1s;
+			animation-delay: 10s;
+			animation-fill-mode: forwards;
+	    }
+
+	    &[data-animation="on"] div.image:nth-child(2) {
+			animation-name: slideImageIn, slideImageOut;
+			animation-duration: 1s;
+			animation-delay: 10s, 21s;
+			animation-fill-mode: forwards;
+		}
+
+		&[data-animation="on"] div.image:nth-child(3) {
+			animation-name: slideImageIn, slideImageOut;
+			animation-duration: 1s;
+			animation-delay: 21s, 32s;
+			animation-fill-mode: forwards;
+		}
+
+		&[data-animation="on"] div.image:nth-child(4) {
+			animation-name: slideImageIn;
+			animation-duration: 1s;
+			animation-delay: 32s;
+			animation-fill-mode: forwards;
+		}
+
+		div.image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			left: 100%;
+
+			&:nth-child(1) {
+				left: 0%;
+			}
+		}
+	}
+
+	h1, p {
+		text-align: center;
+	}
+
+	h1 {
+		margin: 130px 0 10px;
+		font-family: "Press Start 2P", sans-serif;
+		font-size: 5rem;
+
+		span {
+			position: relative;
+		}
+
+		@media all and (max-width: $smallMin - 1) {
+			margin-top: 65px;
+			font-size: 2rem;
+		}
+	}
+
+	h3 {
+		margin: 0;
+		font-family: "Press Start 2P", sans-serif;
+		font-size: 1rem;
+		line-height: 1.75em;
+		text-align: center;
+
+		@media all and (max-width: $smallMin - 1) {
+			font-size: 0.8rem;
+		}
+	}
+
+	p {
+		font-size: 1rem;
+	}
+
+	img.mario {
+		filter: grayscale(100%) brightness(2);
+		position: absolute;
+		top: -30px;
+		left: 0;
+		width: 18px;
+		height: auto;
+		animation-name: mario;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+
+		@media all and (max-width: $smallMin - 1) {
+			animation-duration: 4s;
+			animation-name: mario-xs;
+		}
+	}
+
+	div.buttons-container {
+		margin: 60px 0;
+		text-align: center;
+
+		.btn {
+			display: inline-block;
+			margin: 0 4px;
+
+			i {
+				display: inline-block;
+				margin: 0 6px 0 0;
+			}
+
+			@media all and (max-width: $smallMin - 1) {
+				display: block;
+				margin: 4px 0;
+			}
+		}
+
+		@media all and (max-width: $smallMin - 1) {
+			margin: 20px 0;
+		}
+	}
+
+	div.email-container {
+		margin: 20px 0;
+
+		input[type="email"] {
+			background-color: transparent;
+			border-color: white;
+			border-width: 0 0 2px;
+			border-style: solid;
+			color: white;
+
+			&::placeholder {
+				color: rgba(255,255,255,0.75);
+			}
+		}
+
+		p {
+			margin-top: 10px;
+		}
+
+		@media all and (max-width: $smallMin - 1) {
+			margin-top: 0;
+
+			input, button {
+				display: block;
+				width: 100%;
+			}
+
+			input[type="email"] {
+				margin: 0 0 10px 0;
+			}
+		}
+	}
+
+	div.container-fluid.nav-container {
+		position: relative;
+
+		div.nav-screen {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: transparent;
+			z-index: 7;
+			display: none;
+		}
+
+		button.nav-trigger {
+			display: none;
+			color: white;
+			background-color: transparent;
+			border: none;
+			position: absolute;
+			right: 10px;
+			top: 6px;
+			z-index: 5;
+			font-size: 1.5rem;
+
+			&:focus {
+				outline: none;
+			}
+
+			&:before {
+				font-family: 'FontAwesome';
+				content: '\f0c9';
+			}
+
+			@media all and (max-width: $smallMin - 1) {
+				display: inline;
+			}
+		}
+
+		nav {
+			font-family: 'Open Sans', sans-serif;
+
+			ul.nav {
+				padding: 20px 0 0;
+				li {
+					a {
+						color: white;
+						text-transform: uppercase;
+					}
+				}
+			}
+
+			@media all and (max-width: $smallMin - 1) {
+				position: fixed;
+				top: 0;
+				right: -80%;
+				z-index: 10;
+				height: 100%;
+				width: 80%;
+				background-color: black;
+				transition: position 500ms, right 500ms;
+
+				ul.nav {
+					padding-top: 10px;
+
+					li {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&.open {
+			nav {
+				right: 0%;
+			}
+
+			button.nav-trigger {
+				&:before {
+					content: '\f00d';
+				}
+			}
+
+			div.nav-screen { 
+				display: block;
+			}
+		}
+	}
+}
+
+@keyframes slideImageOut {
+	0% { left: 0%; }
+	100% { left: -100%; }
+}
+
+@keyframes slideImageIn {
+	0% { left: 100%; }
+	100% { left: 0%; }
+}
+
+@keyframes mario {
+	0% { left: 0; margin-left: 0; }
+	38% { top: -30px; }
+	42% { top: -80px; }
+	46% { top: -30px; }
+	50% { left: 102%; margin-left: -40px; transform: rotateY(0deg); }
+	54% { top: -30px; }
+	58% { top: -80px; }
+	62% { top: -30px; }
+	51% { transform: rotateY(180deg); }
+	99% { transform: rotateY(180deg); }
+	100% { left: 0; margin-left: 0; transform: rotateY(0deg); }
+}
+
+@keyframes mario-xs {
+	0% { left: 0; margin-left: 0; }
+	39% { top: -30px; }
+	43% { top: -50px; }
+	48% { top: -30px; }
+	50% { left: 104%; margin-left: -40px; transform: rotateY(0deg); }
+	54% { top: -30px; }
+	58% { top: -50px; }
+	62% { top: -30px; }
+	51% { transform: rotateY(180deg); }
+	99% { transform: rotateY(180deg); }
+	100% { left: 0; margin-left: 0; transform: rotateY(0deg); }
+}
+/**
+ * END INTRO CSS
+ */
+
+/**
+ * START ABOUT CSS
+ */
+section.about {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: #666666;
+	color: white;
+
+	h3 {
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		margin: 30px 0;
+	}
+
+	h5 {
+		margin: 40px 0 20px;
+	}
+
+	p {
+		line-height: 1.75em;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		line-height: 1.75em;
+	}
+
+	div.image-with-caption {
+		margin: 40px 0 0;
+
+		span {
+			font-style: italic;
+			font-size: 0.9rem;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	@media all and (max-width: $smallMin - 1) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+/**
+ * END ABOUT CSS
+ */
+
+/**
+ * START PAST EVENTS CSS
+ */
+section.past-events {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: black;
+	color: white;
+
+	h2 {
+		text-align: left;
+		margin: 0 0 20px;
+
+		i {
+			margin-left: 0;
+		}
+	}
+
+	p {
+		font-size: 0.9rem;
+	}
+
+	div.album {
+		a {
+			position: relative;
+			overflow: hidden;
+			display: block;
+			color: white;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin: 4px 0;
+
+			img {
+				max-width: 100%;
+			}
+
+			span.thumb {
+
+			}
+
+			span.title {
+				width: 100%;
+				height: 100%;
+				background-color: rgba($lanwarRed, 0.75);
+				position: absolute;
+				top: 100%;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: top 300ms;
+
+				@media (hover: none) {
+					position: absolute;
+					top: 0;
+					background-color: rgba($lanwarRed, 0.5);
+				}
+			}
+
+			&:hover {
+				span.title {
+					top: 0;
+				}
+			}
+		}
+	}
+
+	@media all and (max-width: $smallMin - 1) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+/**
+ * END PAST EVENTS CSS
+ */
+
+/**
+ * START CONTACT CSS
+ */
+section.contact {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: $lanwarRed;
+	color: white;
+
+	h2 {
+		text-align: left;
+		margin: 0 0 20px;
+	}
+
+	a {
+		color: white;
+		text-decoration: underline;
+	}
+
+	input, textarea {
+		border: none;
+		transition: border-color 0s;
+		color: black;
+
+		&:focus {
+			border: none;
+			outline: none;
+			color: black;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0 0 60px;
+		padding: 0;
+
+		li {
+			display: inline;
+
+			a {
+				padding: 4px;
+				margin: 4px;
+				display: inline-block;
+				font-size: 1.75rem;
+			}
+
+			&:first-child {
+				a {
+					margin-left: 0;
+					padding-left: 0;
+				}
+			}
+
+			&:last-child {
+				clear: right;
+			}
+		}
+	}
+
+	@media all and (max-width: $smallMin - 1) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		button {
+			width: 100%;
+			margin: 0 0 60px;
+		}
+	}
+}
+/**
+ * END CONTACT CSS
+ */
+
+/**
+ * START SPONSORS CSS
+ */
+section.sponsors {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: #2D2D2D;
+	color: white;
+
+	a {
+		color: white;
+		text-decoration: underline;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	@media all and (max-width: $smallMin - 1) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+/**
+ * END SPONSORS CSS
+ */
+
+/**
+ * START MAP CSS
+ */
+.container-fluid.map {
+
+	.col {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.map-responsive{
+	    overflow:hidden;
+	    padding-bottom:30%;
+	    position:relative;
+	    height:0;
+	}
+	.map-responsive iframe{
+	    left:0;
+	    top:0;
+	    height:100%;
+	    width:100%;
+	    position:absolute;
+	}
+
+}
+/**
+ * END MAP CSS
+ */
