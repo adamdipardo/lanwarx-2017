@@ -183,7 +183,7 @@ section.intro {
 		}
 	}
 
-	h1, p {
+	h1, p, h4, h5 {
 		text-align: center;
 	}
 
@@ -212,6 +212,28 @@ section.intro {
 		@media all and (max-width: $smallMin - 1) {
 			font-size: 0.8rem;
 		}
+	}
+
+	h4 {
+		margin: 0 0 10px;
+	    text-align: center;
+	    font-family: "Press Start 2P", sans-serif;
+	    font-size: 1.5rem;
+	    line-height: 1.75em;
+	}
+
+	h5 {
+		margin: 0 0 40px;
+	    text-align: center;
+	    font-family: "Press Start 2P", sans-serif;
+	    font-size: 1.1rem;
+	    line-height: 1.75em;
+
+	    a {
+	    	color: white;
+		    font-size: 1.1rem;
+		    text-decoration: underline;
+	    }
 	}
 
 	p {
