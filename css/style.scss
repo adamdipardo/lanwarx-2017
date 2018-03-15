@@ -275,6 +275,29 @@ section.intro {
 				display: block;
 				margin: 4px 0;
 			}
+
+			&.btn-lanwar {
+				&.btn-big {
+					font-size: 2rem;
+				    text-transform: uppercase;
+				    font-family: "Press Start 2P",sans-serif;
+				    letter-spacing: 0.1px;
+				    margin: 20px 0;
+				    background-color: white;
+				    color: #870e14;
+				    padding: .5rem .75rem .25rem;
+
+				    i {
+				    	position: relative;
+					    top: -5px;
+					    left: -4px;
+				    }
+
+				    @media all and (max-width: $smallMin - 1) {
+				    	font-size: 1.3rem;
+				    }
+				}
+			}
 		}
 
 		@media all and (max-width: $smallMin - 1) {
